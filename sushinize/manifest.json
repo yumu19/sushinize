@@ -1,0 +1,28 @@
+{
+	"name": "すべてが🍣になる",
+	"description": "ウェブサイトのすべての文字を🍣に変える",
+	"version": "1.0",
+	"icons": {
+		"16":"sushi16.png",
+		"48":"sushi48.png",
+		"128":"sushi128.png"
+    },
+    "browser_action": {
+    	"default_icon": "sushi.png"
+  	},
+	"manifest_version": 2,
+    "permissions": [
+      "tabs", "https://*/*", "http://*/*","storage"
+    ],
+	"content_scripts": [
+		{
+			"matches": ["https://*/*","http://*/*"],
+			"js": ["jquery-1.11.1.min.js","background.js"]
+		}
+
+	],
+	"web_accessible_resources" : [
+		"jquery.min.map",
+        "sushi.jpg"
+	]
+}
